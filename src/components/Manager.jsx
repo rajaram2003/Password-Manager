@@ -12,13 +12,13 @@ const Manager = () => {
         </h1>
         <p className="text-yellow-300 text-lg text-center">Your own Password Manager</p>
 
-      <div className="text-black flex flex-col p-4 gap-5">
+      <div className="text-black flex flex-col p-4 gap-5 items-center">
         <input className="rounded-full border border-amber-300 w-full p-4 py-1" type="text" name="" id="" />
         <div className="flex w-full justify-between gap-5">
           <input className="rounded-full border border-amber-300 w-full p-4 py-1" type="text" name="" id="" />
           <input className="rounded-full border border-amber-300 w-full p-4 py-1" type="text" name="" id="" />
         </div>
-        <button className="flex justify-center items-center bg-amber-300 rounded-full px-2 py-2 w-fit hover:bg-amber-600 cursor-pointer">
+        <button className="flex justify-center items-center bg-amber-300 rounded-full px-4 py-2 w-fit hover:bg-amber-600 cursor-pointer">
         <lord-icon
     src="https://cdn.lordicon.com/slmechys.json"
     trigger="hover">
