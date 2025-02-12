@@ -1,21 +1,22 @@
 const Manager = () => {
   return (
     <div>
-      <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
-        <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)]"></div>
-      </div>
+<div className="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
 
-      <div className="bg-slate-100 mycontainer">
-        <h1>PassOP</h1>
-        <p>Your own Password Manager</p>
+      <div className="bg-slate-800 mycontainer">
 
-      <div className="text-white flex flex-col p-4">
+        <h1 className="text-4xl text font-bold text-center">
+        <span className="text-yellow-300">&lt; </span>
+        Pass
+        <span className="text-yellow-300">OP /&gt;</span>
+        </h1>
+        <p className="text-yellow-300 text-lg text-center">Your own Password Manager</p>
 
-        <input className="rounded-full" type="text" name="" id="" />
-
-        <div className="flex">
-          <input type="text" />
-          <input type="text" />
+      <div className="text-white flex flex-col p-4 gap-3">
+        <input className="rounded-full border border-amber-300 w-full p-4 py-1" type="text" name="" id="" />
+        <div className="flex w-1/2">
+          <input className="rounded-full border border-amber-300 w-full p-4 py-1" type="text" name="" id="" />
+          <input className="rounded-full border border-amber-300 w-full p-4 py-1" type="text" name="" id="" />
         </div>
       </div>
       </div>

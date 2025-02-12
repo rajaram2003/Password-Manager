@@ -6,9 +6,9 @@ const Navbar = () => {
 
       <div className="logo font-bold text-white text-2xl">
 
-      <span className="text-green-600">&lt; </span>
+      <span className="text-yellow-300">&lt; </span>
         Pass
-        <span className="text-green-600">OP /&gt;</span>
+        <span className="text-yellow-300">OP /&gt;</span>
 
         </div>
       <ul>
