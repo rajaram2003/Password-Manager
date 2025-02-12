@@ -18,12 +18,20 @@ const Manager = () => {
           <input className="rounded-full border border-amber-300 w-full p-4 py-1" type="text" name="" id="" />
           <input className="rounded-full border border-amber-300 w-full p-4 py-1" type="text" name="" id="" />
         </div>
-        <button className="flex justify-center items-center bg-amber-300 rounded-full px-4 py-2 w-fit hover:bg-amber-600 cursor-pointer">
-        <lord-icon
-    src="https://cdn.lordicon.com/slmechys.json"
-    trigger="hover">
-        </lord-icon>
-        Add Password</button>
+
+        <button
+      aria-label="Add Password"
+      className="parent-button flex justify-center items-center gap-2 bg-amber-300 rounded-full px-4 py-2 w-fit hover:bg-amber-600 transition-colors cursor-pointer active:scale-95"
+    >
+      <lord-icon
+        src="https://cdn.lordicon.com/slmechys.json"
+        trigger="hover"
+        target="button"
+        style={{ width: "24px", height: "24px" }}
+      ></lord-icon>
+      Add Password
+    </button>
+    
       </div>
       </div>
     </div>
