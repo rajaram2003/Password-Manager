@@ -13,9 +13,9 @@ const Navbar = () => {
         </div>
       <ul>
         <li className="flex gap-4">
-          <a className="hover:font-bold" href="">Home</a>
-          <a className="hover:font-bold" href="">About</a>
-          <a className="hover:font-bold" href="">Contact</a>
+          <a className="hover:font-bold hover:text-yellow-300" href="">Home</a>
+          <a className="hover:font-bold hover:text-yellow-300" href="">About</a>
+          <a className="hover:font-bold hover:text-yellow-300" href="">Contact</a>
         </li>
       </ul>
       </div>
