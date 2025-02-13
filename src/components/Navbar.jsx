@@ -8,7 +8,8 @@ const Navbar = () => {
 
       <span className="text-yellow-300">&lt; </span>
         Pass
-        <span className="text-yellow-300">OP /&gt;</span>
+      <span className="text-yellow-300">Mate /&gt;</span> 
+
 
         </div>
       <ul>
