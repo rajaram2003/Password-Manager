@@ -12,16 +12,23 @@ const Manager = () => {
         </h1>
         <p className="text-yellow-300 text-lg text-center">Secure. Simplify. Own your passwords.</p>
 
-      <div className="text-black flex flex-col p-4 gap-5 items-center">
-        <input className="rounded-full border border-amber-300 w-full p-4 py-1" type="text" name="" id="" />
+      <div className="text-slate-800 flex flex-col p-4 gap-5 items-center">   
+      <input placeholder="Enter website URL" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="" id="" />  
         <div className="flex w-full justify-between gap-5">
-          <input className="rounded-full border border-amber-300 w-full p-4 py-1" type="text" name="" id="" />
-          <input className="rounded-full border border-amber-300 w-full p-4 py-1" type="text" name="" id="" />
+          <input placeholder="Enter Username" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="" id="" />
+          <div className="relative">
+
+          <input placeholder="Enter Password" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="" id="" />
+          <span className="absolute right-1 top-1 cursor-pointer">
+      <img src="https://cdn-icons-png.flaticon.com/512/159/159604.png" alt="Eye Icon" className="w-6 h-6" />
+    </span>
+
+          </div>
         </div>
 
         <button
       aria-label="Add Password"
-      className="flex justify-center items-center gap-2 bg-amber-300 rounded-full px-6 py-2 w-fit hover:bg-amber-600 transition-colors cursor-pointer active:scale-95"
+      className="flex justify-center items-center gap-2 bg-amber-300 rounded-full px-6 py-2 w-fit hover:bg-amber-600 transition-colors cursor-pointer active:scale-95 border border-yellow-400"
     >
       <lord-icon
         src="https://cdn.lordicon.com/slmechys.json"
