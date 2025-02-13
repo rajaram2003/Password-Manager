@@ -21,7 +21,7 @@ const Manager = () => {
 
         <button
       aria-label="Add Password"
-      className="flex justify-center items-center gap-2 bg-amber-300 rounded-full px-4 py-2 w-fit hover:bg-amber-600 transition-colors cursor-pointer active:scale-95"
+      className="flex justify-center items-center gap-2 bg-amber-300 rounded-full px-6 py-2 w-fit hover:bg-amber-600 transition-colors cursor-pointer active:scale-95"
     >
       <lord-icon
         src="https://cdn.lordicon.com/slmechys.json"
