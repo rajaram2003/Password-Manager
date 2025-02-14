@@ -17,7 +17,7 @@ const Manager = () => {
   }
 
   const savePassword = () => {
-
+    console.log(form)
   }
 
   const handleChange = (e) => {
