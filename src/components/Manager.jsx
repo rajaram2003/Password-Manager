@@ -8,11 +8,11 @@ const Manager = () => {
 
   const showPassword = () => {
     alert('show the password');
-    if(ref.current.src === "https://cdn-icons-png.flaticon.com/512/565/565655.png"){
-    ref.current.src = "https://cdn-icons-png.flaticon.com/512/159/159604.png"
+    if(ref.current.src === "https://cdn-icons-png.flaticon.com/128/8231/8231687.png"){
+    ref.current.src = "https://cdn-icons-png.flaticon.com/128/8231/8231416.png"
   }
   else{
-  ref.current.src = "https://cdn-icons-png.flaticon.com/512/565/565655.png"
+  ref.current.src = "https://cdn-icons-png.flaticon.com/128/8231/8231687.png"
   }
   }
 
@@ -45,7 +45,7 @@ const Manager = () => {
 
           <input value={form.password} onChange={handleChange} placeholder="Enter Password" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="password" id="" />
           <span className="absolute right-1 top-1 cursor-pointer" onClick={showPassword}>
-      <img ref={ref} src="https://cdn-icons-png.flaticon.com/512/159/159604.png" alt="Eye Icon" className="w-6 h-6" />
+      <img ref={ref} src="https://cdn-icons-png.flaticon.com/128/8231/8231416.png" alt="Eye Icon" className="w-6 h-6" />
     </span>
 
           </div>
