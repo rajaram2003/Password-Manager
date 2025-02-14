@@ -20,6 +20,10 @@ const Manager = () => {
 
   }
 
+  const handleChange = (e) => {
+    setform({...form, [e.target.name]: e.target.value})
+  }
+
   return (
     <div>
 <div className="absolute inset-0 -z-10 h-full w-full bg-amber-100 [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#fef3c7_100%)]"></div>
@@ -34,12 +38,12 @@ const Manager = () => {
         <p className="text-yellow-300 text-lg text-center">Secure. Simplify. Own your passwords.</p>
 
       <div className="text-slate-800 flex flex-col p-4 gap-5 items-center">   
-      <input value={form.site} placeholder="Enter website URL" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="" id="" />  
+      <input value={form.site} onChange={handleChange} placeholder="Enter website URL" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="site" id="" />  
         <div className="flex w-full justify-between gap-5">
-          <input value={form.username} placeholder="Enter Username" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="" id="" />
+          <input value={form.username} onChange={handleChange} placeholder="Enter Username" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="username" id="" />
           <div className="relative">
 
-          <input value={form.password} placeholder="Enter Password" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="" id="" />
+          <input value={form.password} onChange={handleChange} placeholder="Enter Password" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="password" id="" />
           <span className="absolute right-1 top-1 cursor-pointer" onClick={showPassword}>
       <img ref={ref} src="https://cdn-icons-png.flaticon.com/512/159/159604.png" alt="Eye Icon" className="w-6 h-6" />
     </span>
