@@ -1,4 +1,16 @@
+import { useRef } from "react"
+
 const Manager = () => {
+  const ref = useRef()
+  const showPassword = () => {
+    alert('show the password');
+    if(ref.current.src === "https://cdn-icons-png.flaticon.com/512/565/565655.png"){
+    ref.current.src = "https://cdn-icons-png.flaticon.com/512/159/159604.png"
+  }
+  else{
+  ref.current.src = "https://cdn-icons-png.flaticon.com/512/565/565655.png"
+  }
+  }
   return (
     <div>
 <div className="absolute inset-0 -z-10 h-full w-full bg-amber-100 [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#fef3c7_100%)]"></div>
@@ -19,8 +31,8 @@ const Manager = () => {
           <div className="relative">
 
           <input placeholder="Enter Password" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="" id="" />
-          <span className="absolute right-1 top-1 cursor-pointer">
-      <img src="https://cdn-icons-png.flaticon.com/512/159/159604.png" alt="Eye Icon" className="w-6 h-6" />
+          <span className="absolute right-1 top-1 cursor-pointer" onClick={showPassword}>
+      <img ref={ref} src="https://cdn-icons-png.flaticon.com/512/159/159604.png" alt="Eye Icon" className="w-6 h-6" />
     </span>
 
           </div>
