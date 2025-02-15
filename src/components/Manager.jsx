@@ -42,7 +42,7 @@ const Manager = () => {
 
         <h1 className="text-4xl text font-bold text-center">
           <span className="text-yellow-300">&lt; </span>
-          <span className="text-slate-800 hover:text-yellow-300">Pass</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r to-violet-400 from-slate-800">Pass</span>
           <span className="text-yellow-300">Mate /&gt;</span>
         </h1>
         <p className="text-slate-800 text-lg text-center">Secure. Simplify. Own your passwords.</p>
@@ -76,7 +76,7 @@ const Manager = () => {
         </div>
 
         <div className="passwords">
-          <h2 className="font-bold text-2xl py-4 text-slate-800">Your Passwords</h2>
+          <h2 className="font-extrabold text-2xl py-4 text-transparent bg-clip-text bg-gradient-to-r to-violet-400 from-slate-800">Your Passwords</h2>
           {passwordArray.length === 0 && <div>No passwords to show</div>}
 
           {passwordArray.length != 0 &&
