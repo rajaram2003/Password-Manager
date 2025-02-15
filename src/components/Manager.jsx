@@ -36,7 +36,7 @@ const Manager = () => {
 
   return (
     <>
-      <div className="absolute inset-0 -z-10 h-full w-full bg-amber-100 [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#fef3c7_100%)]"></div>
+      <div className="absolute inset-0 -z-10 h-full w-full bg-amber-200 [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#fef3c7_100%)]"></div>
 
       <div className="mycontainer">
 
@@ -77,6 +77,9 @@ const Manager = () => {
 
         <div className="passwords">
           <h2 className="font-bold text-2xl py-4 text-slate-800">Your Passwords</h2>
+          {passwordArray.length === 0 && <div>No passwords to show</div>}
+
+          {passwordArray.length != 0 &&
           <table className="table-auto w-full rounded-md overflow-hidden">
             <thead className="bg-yellow-300 text-slate-800">
               <tr>
@@ -102,7 +105,7 @@ const Manager = () => {
                 <td className="py-2 border border-white text-center w-32">1975</td>
               </tr>
             </tbody>
-          </table>
+          </table>}
         </div>
 
       </div>
