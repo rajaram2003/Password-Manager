@@ -83,9 +83,9 @@ const Manager = () => {
           <table className="table-auto w-full rounded-md overflow-hidden">
             <thead className="bg-yellow-300 text-slate-800">
               <tr>
-                <th className="py-2">Song</th>
-                <th className="py-2">Artist</th>
-                <th className="py-2">Year</th>
+                <th className="py-2">Site</th>
+                <th className="py-2">UserName</th>
+                <th className="py-2">Password</th>
               </tr>
             </thead>
             <tbody className="bg-yellow-100 text-slate-800">
