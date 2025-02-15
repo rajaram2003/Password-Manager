@@ -42,10 +42,10 @@ const Manager = () => {
 
         <h1 className="text-4xl text font-bold text-center">
           <span className="text-yellow-300">&lt; </span>
-          <span className="hover:text-yellow-300">Pass</span>
+          <span className="text-slate-800 hover:text-yellow-300">Pass</span>
           <span className="text-yellow-300">Mate /&gt;</span>
         </h1>
-        <p className="text-yellow-300 text-lg text-center">Secure. Simplify. Own your passwords.</p>
+        <p className="text-slate-800 text-lg text-center">Secure. Simplify. Own your passwords.</p>
 
         <div className="text-slate-800 flex flex-col p-4 gap-5 items-center">
           <input value={form.site} onChange={handleChange} placeholder="Enter website URL" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="site" id="" />
@@ -77,29 +77,29 @@ const Manager = () => {
 
         <div className="passwords">
           <h2>Your Passwords</h2>
-          <table className="table-auto w-full">
-            <thead>
+          <table className="table-auto w-full rounded-md overflow-hidden">
+            <thead className="bg-yellow-300 text-slate-800">
               <tr>
-                <th>Song</th>
-                <th>Artist</th>
-                <th>Year</th>
+                <th className="py-2">Song</th>
+                <th className="py-2">Artist</th>
+                <th className="py-2">Year</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="bg-yellow-100">
               <tr>
-                <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-                <td>Malcolm Lockyer</td>
-                <td>1961</td>
+                <td className="text-center w-32">The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+                <td className="text-center w-32">Malcolm Lockyer</td>
+                <td className="text-center w-32">1961</td>
               </tr>
               <tr>
-                <td>Witchy Woman</td>
-                <td>The Eagles</td>
-                <td>1972</td>
+                <td className="text-center w-32">Witchy Woman</td>
+                <td className="text-center w-32">The Eagles</td>
+                <td className="text-center w-32">1972</td>
               </tr>
               <tr>
-                <td>Shining Star</td>
-                <td>Earth, Wind, and Fire</td>
-                <td>1975</td>
+                <td className="text-center w-32">Shining Star</td>
+                <td className="text-center w-32">Earth, Wind, and Fire</td>
+                <td className="text-center w-32">1975</td>
               </tr>
             </tbody>
           </table>
