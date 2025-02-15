@@ -77,7 +77,7 @@ const Manager = () => {
 
         <div className="passwords">
           <h2>Your Passwords</h2>
-          <table className="table-auto">
+          <table className="table-auto w-full">
             <thead>
               <tr>
                 <th>Song</th>
@@ -104,7 +104,7 @@ const Manager = () => {
             </tbody>
           </table>
         </div>
-        
+
       </div>
     </>
   )
