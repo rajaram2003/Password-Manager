@@ -76,7 +76,7 @@ const Manager = () => {
         </div>
 
         <div className="passwords">
-          <h2>Your Passwords</h2>
+          <h2 className="font-bold text-2xl py-4 text-slate-800">Your Passwords</h2>
           <table className="table-auto w-full rounded-md overflow-hidden">
             <thead className="bg-yellow-300 text-slate-800">
               <tr>
@@ -85,7 +85,7 @@ const Manager = () => {
                 <th className="py-2">Year</th>
               </tr>
             </thead>
-            <tbody className="bg-yellow-100">
+            <tbody className="bg-yellow-100 text-slate-800">
               <tr>
                 <td className="py-2 border border-white text-center w-32">The Sliding Mr. Bones (Next Stop, Pottersville)</td>
                 <td className="py-2 border border-white text-center w-32">Malcolm Lockyer</td>
