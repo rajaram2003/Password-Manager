@@ -1,9 +1,17 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useRef } from "react"
 
 const Manager = () => {
   const ref = useRef()
   const [form, setform] = useState({site: "", username: "", password: ""})
+  const [passwordArray, setPasswordArray] = useState([])
+
+  useEffect(() => {
+    let passwords = localStorage.getItem("passwords");
+    if(passwords){
+      setPasswordArray(JSON.parse(passwords))
+    }
+  }, [])
 
 
   const showPassword = () => {
@@ -18,6 +26,14 @@ const Manager = () => {
 
   const savePassword = () => {
     console.log(form)
+    let passwords = localStorage.getItem("passwords");
+    let passwordArray;
+    if(passwords){
+      passwordArray = JSON.parse(passwords)
+    }
+    else{
+      passwordArray = []
+    }
   }
 
   const handleChange = (e) => {
