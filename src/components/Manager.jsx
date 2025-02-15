@@ -26,7 +26,8 @@ const Manager = () => {
 
   const savePassword = () => {
     setPasswordArray([...passwordArray, form])
-    console.log(passwordArray)
+    localStorage.setItem("passwords", JSON.stringify([...passwordArray, form]))
+    console.log([...passwordArray, form])
   }
 
   const handleChange = (e) => {
