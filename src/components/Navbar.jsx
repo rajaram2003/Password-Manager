@@ -1,7 +1,7 @@
 
 const Navbar = () => {
   return (
-    <nav className="bg-slate-800 text-white">
+    <nav className="bg-gradient-to-r to-violet-400 from-slate-800 text-white">
       <div className="mycontainer flex justify-between items-center px-4 py-5 h-14">
 
       <div className="logo font-bold text-white text-2xl">

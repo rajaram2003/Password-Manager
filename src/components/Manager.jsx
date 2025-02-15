@@ -36,7 +36,8 @@ const Manager = () => {
 
   return (
     <>
-      <div className="absolute inset-0 -z-10 h-full w-full bg-amber-200 [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#fef3c7_100%)]"></div>
+      <div className="absolute inset-0 -z-1 h-full w-full bg-violet-200 bg-gradient-to-b from-white to-fef3c7"></div>
+
 
       <div className="mycontainer">
 
@@ -63,7 +64,7 @@ const Manager = () => {
 
           <button onClick={savePassword}
             aria-label="Add Password"
-            className="flex justify-center items-center gap-2 bg-amber-300 rounded-full px-6 py-2 w-fit hover:bg-amber-600 transition-colors cursor-pointer active:scale-95 border border-yellow-400"
+            className="flex justify-center items-center gap-2 bg-amber-300 rounded-full px-6 py-2 w-fit hover:bg-violet-400 transition-colors cursor-pointer active:scale-95 border border-yellow-400"
           >
             <lord-icon
               src="https://cdn.lordicon.com/slmechys.json"
