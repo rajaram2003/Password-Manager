@@ -3,6 +3,7 @@ import { useRef } from "react"
 
 const Manager = () => {
   const ref = useRef()
+  const passwordRef = useRef()
   const [form, setform] = useState({ site: "", username: "", password: "" })
   const [passwordArray, setPasswordArray] = useState([])
 
@@ -15,11 +16,14 @@ const Manager = () => {
 
 
   const showPassword = () => {
-    alert('show the password');
+    passwordRef.current.type = "text"
+    console.log(ref.current.src)
     if (ref.current.src === "https://cdn-icons-png.flaticon.com/128/8231/8231687.png") {
       ref.current.src = "https://cdn-icons-png.flaticon.com/128/8231/8231416.png"
+      passwordRef.current.type = "password"
     }
     else {
+      passwordRef.current.type = "text"
       ref.current.src = "https://cdn-icons-png.flaticon.com/128/8231/8231687.png"
     }
   }
@@ -54,10 +58,11 @@ const Manager = () => {
             <input value={form.username} onChange={handleChange} placeholder="Enter Username" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="username" id="" />
             <div className="relative">
 
-              <input value={form.password} onChange={handleChange} placeholder="Enter Password" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="password" id="" />
-              <span className="absolute right-1 top-1 cursor-pointer" onClick={showPassword}>
-                <img ref={ref} src="https://cdn-icons-png.flaticon.com/128/8231/8231416.png" alt="Eye Icon" className="w-6 h-6" />
+              <input ref={passwordRef} value={form.password} onChange={handleChange} placeholder="Enter Password" className="rounded-full border border-amber-400 w-full p-4 py-1" type="password" name="password" id="" />
+              <span className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer" onClick={showPassword}>
+                <img ref={ref} src="https://cdn-icons-png.flaticon.com/128/8231/8231416.png" alt="Eye Icon" className="w-7 h-7" />
               </span>
+
 
             </div>
           </div>
@@ -81,25 +86,25 @@ const Manager = () => {
           {passwordArray.length === 0 && <div className="text-slate-800">No passwords to show</div>}
 
           {passwordArray.length != 0 &&
-          <table className="table-auto w-full rounded-md overflow-hidden">
-            <thead className="bg-yellow-300 text-slate-800">
-              <tr>
-                <th className="py-2">Site</th>
-                <th className="py-2">UserName</th>
-                <th className="py-2">Password</th>
-              </tr>
-            </thead>
-            <tbody className="bg-yellow-100 text-slate-800">
-              {passwordArray.map((item, index)=>{
-              return <tr key={index}>
-                <td className="py-2 border border-white text-center w-32"><a href={item.site} target="_blank">{item.site}</a></td>
-                <td className="py-2 border border-white text-center w-32">{item.username}</td>
-                <td className="py-2 border border-white text-center w-32">{item.password
-                  }</td>
-              </tr>
-              })}
-            </tbody>
-          </table>}
+            <table className="table-auto w-full rounded-md overflow-hidden">
+              <thead className="bg-yellow-300 text-slate-800">
+                <tr>
+                  <th className="py-2">Site</th>
+                  <th className="py-2">UserName</th>
+                  <th className="py-2">Password</th>
+                </tr>
+              </thead>
+              <tbody className="bg-yellow-100 text-slate-800">
+                {passwordArray.map((item, index) => {
+                  return <tr key={index}>
+                    <td className="py-2 border border-white text-center w-32"><a href={item.site} target="_blank">{item.site}</a></td>
+                    <td className="py-2 border border-white text-center w-32">{item.username}</td>
+                    <td className="py-2 border border-white text-center w-32">{item.password
+                    }</td>
+                  </tr>
+                })}
+              </tbody>
+            </table>}
         </div>
 
       </div>
