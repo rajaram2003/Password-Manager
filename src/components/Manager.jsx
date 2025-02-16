@@ -14,6 +14,10 @@ const Manager = () => {
     }
   }, [])
 
+  const copyText = (text) => {
+    navigator.clipboard.writeText(text)
+  }
+
 
   const showPassword = () => {
     passwordRef.current.type = "text"
@@ -100,7 +104,7 @@ const Manager = () => {
                     <td className="py-2 border border-white text-center">
                       <div className="flex items-center justify-center">
                       <a href={item.site} target="_blank">{item.site}</a>
-                      <div className="cursor-pointer">
+                      <div className="lordiconcopy cursor-pointer" onClick={copyText(item.site)}>
                         <lord-icon
                           style={{ "width": "25px", "height": "25px", "padding-top": "3px", "padding-left": "3px" }}
                           src="https://cdn.lordicon.com/depeqmsz.json"
@@ -113,7 +117,7 @@ const Manager = () => {
                     <td className="py-2 border border-white text-center">
                       <div className="flex items-center justify-center">
                       <span>{item.username}</span>
-                    <div className="cursor-pointer">
+                    <div className="lordiconcopy cursor-pointer" onClick={copyText(item.username)}>
                         <lord-icon
                           style={{ "width": "25px", "height": "25px", "padding-top": "3px", "padding-left": "3px" }}
                           src="https://cdn.lordicon.com/depeqmsz.json"
@@ -126,7 +130,7 @@ const Manager = () => {
                     <td className="py-2 border border-white text-center">
                     <div className="flex items-center justify-center ">
                       <span>{item.password}</span>
-                    <div className="cursor-pointer">
+                    <div className="lordiconcopy cursor-pointer" onClick={copyText(item.password)}>
                         <lord-icon
                           style={{ "width": "25px", "height": "25px", "padding-top": "3px", "padding-left": "3px" }}
                           src="https://cdn.lordicon.com/depeqmsz.json"
