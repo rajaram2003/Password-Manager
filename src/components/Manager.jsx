@@ -97,7 +97,9 @@ const Manager = () => {
               <tbody className="bg-yellow-100 text-slate-800">
                 {passwordArray.map((item, index) => {
                   return <tr key={index}>
-                    <td className="flex items-center justify-center py-2 border border-white text-center"><a href={item.site} target="_blank">{item.site}</a>
+                    <td className="py-2 border border-white text-center">
+                      <div className="flex items-center justify-center">
+                      <a href={item.site} target="_blank">{item.site}</a>
                       <div className="cursor-pointer">
                         <lord-icon
                           style={{ "width": "25px", "height": "25px", "padding-top": "3px", "padding-left": "3px" }}
@@ -105,9 +107,12 @@ const Manager = () => {
                           trigger="hover">
                         </lord-icon>
                       </div>
+                      </div>
                     </td>
 
-                    <td className="py-2 border border-white text-center w-32">{item.username}
+                    <td className="py-2 border border-white text-center">
+                      <div className="flex items-center justify-center">
+                      <span>{item.username}</span>
                     <div className="cursor-pointer">
                         <lord-icon
                           style={{ "width": "25px", "height": "25px", "padding-top": "3px", "padding-left": "3px" }}
@@ -115,15 +120,19 @@ const Manager = () => {
                           trigger="hover">
                         </lord-icon>
                       </div>
+                      </div>
                     </td>
-                    
-                    <td className="py-2 border border-white text-center w-32">{item.password}
+
+                    <td className="py-2 border border-white text-center">
+                    <div className="flex items-center justify-center ">
+                      <span>{item.password}</span>
                     <div className="cursor-pointer">
                         <lord-icon
                           style={{ "width": "25px", "height": "25px", "padding-top": "3px", "padding-left": "3px" }}
                           src="https://cdn.lordicon.com/depeqmsz.json"
                           trigger="hover">
                         </lord-icon>
+                      </div>
                       </div>
                     </td>
                   </tr>
