@@ -50,7 +50,7 @@ const Manager = () => {
           <span className="text-transparent bg-clip-text bg-gradient-to-r to-violet-400 from-slate-800">Pass</span>
           <span className="text-yellow-300">Mate /&gt;</span>
         </h1>
-        <p className="text-slate-800 text-lg text-center">Secure. Simplify. Own your passwords.</p>
+        <p className="text-slate-800 text-lg font-medium text-center">Secure. Simplify. Own your passwords.</p>
 
         <div className="text-slate-800 flex flex-col p-4 gap-5 items-center">
           <input value={form.site} onChange={handleChange} placeholder="Enter website URL" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="site" id="" />
@@ -83,7 +83,7 @@ const Manager = () => {
 
         <div className="passwords">
           <h2 className="font-extrabold text-2xl py-4 text-transparent bg-clip-text bg-gradient-to-r to-violet-400 from-slate-800">Your Passwords</h2>
-          {passwordArray.length === 0 && <div className="text-slate-800">No passwords to show</div>}
+          {passwordArray.length === 0 && <div className="text-red-600">No passwords to show 🐸</div>}
 
           {passwordArray.length != 0 &&
             <table className="table-auto w-full rounded-md overflow-hidden">
