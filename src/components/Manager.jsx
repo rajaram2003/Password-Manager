@@ -78,7 +78,7 @@ const Manager = () => {
 
         <div className="passwords">
           <h2 className="font-extrabold text-2xl py-4 text-transparent bg-clip-text bg-gradient-to-r to-violet-400 from-slate-800">Your Passwords</h2>
-          {passwordArray.length === 0 && <div>No passwords to show</div>}
+          {passwordArray.length === 0 && <div className="text-slate-800">No passwords to show</div>}
 
           {passwordArray.length != 0 &&
           <table className="table-auto w-full rounded-md overflow-hidden">
