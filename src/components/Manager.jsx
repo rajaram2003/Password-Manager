@@ -69,7 +69,7 @@ const Manager = () => {
 
           <button onClick={savePassword}
             aria-label="Add Password"
-            className="flex justify-center items-center gap-2 bg-amber-300 rounded-full px-6 py-2 w-fit hover:bg-violet-400 transition-colors cursor-pointer active:scale-95 border border-yellow-400"
+            className="flex justify-center items-center gap-2 font-medium text-slate-800 bg-amber-300 rounded-full px-6 py-2 w-fit hover:bg-violet-400 transition-colors cursor-pointer active:scale-95 border border-yellow-400"
           >
             <lord-icon
               src="https://cdn.lordicon.com/slmechys.json"
