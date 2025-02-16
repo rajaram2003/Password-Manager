@@ -97,7 +97,14 @@ const Manager = () => {
               <tbody className="bg-yellow-100 text-slate-800">
                 {passwordArray.map((item, index) => {
                   return <tr key={index}>
-                    <td className="py-2 border border-white text-center w-32"><a href={item.site} target="_blank">{item.site}</a></td>
+                    <td className="flex items-center justify-center py-2 border border-white text-center"><a href={item.site} target="_blank">{item.site}</a>
+                    <div className="cursor-pointer">
+                      <lord-icon
+                        src="https://cdn.lordicon.com/depeqmsz.json"
+                        trigger="hover">
+                      </lord-icon>
+                      </div>
+                    </td>
                     <td className="py-2 border border-white text-center w-32">{item.username}</td>
                     <td className="py-2 border border-white text-center w-32">{item.password
                     }</td>
