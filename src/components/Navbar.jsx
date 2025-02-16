@@ -12,13 +12,13 @@ const Navbar = () => {
 
 
         </div>
-        <ul>
+        {/* <ul>
           <li className="flex gap-4">
             <a className="hover:font-bold hover:text-yellow-300" href="">Home</a>
             <a className="hover:font-bold hover:text-yellow-300" href="">About</a>
             <a className="hover:font-bold hover:text-yellow-300" href="">Contact</a>
           </li>
-        </ul>
+        </ul> */}
 
         <button className="flex items-center gap-2 bg-slate-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 cursor-pointer active:scale-95 border border-yellow-400 transition-all">
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub Icon" width="24" height="24" className="invert" />
