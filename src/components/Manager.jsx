@@ -100,6 +100,7 @@ const Manager = () => {
                     <td className="flex items-center justify-center py-2 border border-white text-center"><a href={item.site} target="_blank">{item.site}</a>
                     <div className="cursor-pointer">
                       <lord-icon
+                      style={{"width":"25px", "height":"25px", "padding-top":"3px", "padding-left":"3px"}}
                         src="https://cdn.lordicon.com/depeqmsz.json"
                         trigger="hover">
                       </lord-icon>
