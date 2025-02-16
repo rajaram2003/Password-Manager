@@ -98,17 +98,34 @@ const Manager = () => {
                 {passwordArray.map((item, index) => {
                   return <tr key={index}>
                     <td className="flex items-center justify-center py-2 border border-white text-center"><a href={item.site} target="_blank">{item.site}</a>
-                    <div className="cursor-pointer">
-                      <lord-icon
-                      style={{"width":"25px", "height":"25px", "padding-top":"3px", "padding-left":"3px"}}
-                        src="https://cdn.lordicon.com/depeqmsz.json"
-                        trigger="hover">
-                      </lord-icon>
+                      <div className="cursor-pointer">
+                        <lord-icon
+                          style={{ "width": "25px", "height": "25px", "padding-top": "3px", "padding-left": "3px" }}
+                          src="https://cdn.lordicon.com/depeqmsz.json"
+                          trigger="hover">
+                        </lord-icon>
                       </div>
                     </td>
-                    <td className="py-2 border border-white text-center w-32">{item.username}</td>
-                    <td className="py-2 border border-white text-center w-32">{item.password
-                    }</td>
+
+                    <td className="py-2 border border-white text-center w-32">{item.username}
+                    <div className="cursor-pointer">
+                        <lord-icon
+                          style={{ "width": "25px", "height": "25px", "padding-top": "3px", "padding-left": "3px" }}
+                          src="https://cdn.lordicon.com/depeqmsz.json"
+                          trigger="hover">
+                        </lord-icon>
+                      </div>
+                    </td>
+                    
+                    <td className="py-2 border border-white text-center w-32">{item.password}
+                    <div className="cursor-pointer">
+                        <lord-icon
+                          style={{ "width": "25px", "height": "25px", "padding-top": "3px", "padding-left": "3px" }}
+                          src="https://cdn.lordicon.com/depeqmsz.json"
+                          trigger="hover">
+                        </lord-icon>
+                      </div>
+                    </td>
                   </tr>
                 })}
               </tbody>
