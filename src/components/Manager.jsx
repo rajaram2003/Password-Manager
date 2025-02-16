@@ -106,7 +106,7 @@ const Manager = () => {
                       <a href={item.site} target="_blank">{item.site}</a>
                       <div className="lordiconcopy cursor-pointer" onClick={copyText(item.site)}>
                         <lord-icon
-                          style={{ "width": "25px", "height": "25px", "padding-top": "3px", "padding-left": "3px" }}
+                          style={{ "width": "25px", "height": "25px", "paddingTop": "3px", "paddingLeft": "3px" }}
                           src="https://cdn.lordicon.com/depeqmsz.json"
                           trigger="hover">
                         </lord-icon>
@@ -119,7 +119,7 @@ const Manager = () => {
                       <span>{item.username}</span>
                     <div className="lordiconcopy cursor-pointer" onClick={copyText(item.username)}>
                         <lord-icon
-                          style={{ "width": "25px", "height": "25px", "padding-top": "3px", "padding-left": "3px" }}
+                          style={{ "width": "25px", "height": "25px", "paddingTop": "3px", "paddingLeft": "3px" }}
                           src="https://cdn.lordicon.com/depeqmsz.json"
                           trigger="hover">
                         </lord-icon>
@@ -132,7 +132,7 @@ const Manager = () => {
                       <span>{item.password}</span>
                     <div className="lordiconcopy cursor-pointer" onClick={copyText(item.password)}>
                         <lord-icon
-                          style={{ "width": "25px", "height": "25px", "padding-top": "3px", "padding-left": "3px" }}
+                          style={{ "width": "25px", "height": "25px", "paddingTop": "3px", "paddingLeft": "3px" }}
                           src="https://cdn.lordicon.com/depeqmsz.json"
                           trigger="hover">
                         </lord-icon>
