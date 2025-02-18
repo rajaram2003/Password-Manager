@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useRef } from "react"
+import { ToastContainer, toast } from 'react-toastify';
 
 const Manager = () => {
   const ref = useRef()
@@ -15,7 +16,16 @@ const Manager = () => {
   }, [])
 
   const copyText = (text) => {
-    alert("copied to clipboard" + text)
+    toast.success('copied to clipboard', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
     navigator.clipboard.writeText(text)
   }
 
@@ -44,6 +54,20 @@ const Manager = () => {
 
   return (
     <>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+
       <div className="absolute inset-0 -z-1 h-full w-full bg-violet-200 bg-gradient-to-b from-white to-fef3c7"></div>
 
 
@@ -103,39 +127,39 @@ const Manager = () => {
                   return <tr key={index}>
                     <td className="py-2 border border-white text-center">
                       <div className="flex items-center justify-center">
-                      <a href={item.site} target="_blank">{item.site}</a>
-                      <div className="lordiconcopy cursor-pointer" onClick={()=>{copyText(item.site)}}>                      <lord-icon
+                        <a href={item.site} target="_blank">{item.site}</a>
+                        <div className="lordiconcopy cursor-pointer" onClick={() => { copyText(item.site) }}>                      <lord-icon
                           style={{ "width": "25px", "height": "25px", "paddingTop": "3px", "paddingLeft": "3px" }}
                           src="https://cdn.lordicon.com/depeqmsz.json"
                           trigger="hover">
                         </lord-icon>
-                      </div>
+                        </div>
                       </div>
                     </td>
 
                     <td className="py-2 border border-white text-center">
                       <div className="flex items-center justify-center">
-                      <span>{item.username}</span>
-                    <div className="lordiconcopy cursor-pointer" onClick={()=>{copyText(item.username)}}>
-                        <lord-icon
-                          style={{ "width": "25px", "height": "25px", "paddingTop": "3px", "paddingLeft": "3px" }}
-                          src="https://cdn.lordicon.com/depeqmsz.json"
-                          trigger="hover">
-                        </lord-icon>
-                      </div>
+                        <span>{item.username}</span>
+                        <div className="lordiconcopy cursor-pointer" onClick={() => { copyText(item.username) }}>
+                          <lord-icon
+                            style={{ "width": "25px", "height": "25px", "paddingTop": "3px", "paddingLeft": "3px" }}
+                            src="https://cdn.lordicon.com/depeqmsz.json"
+                            trigger="hover">
+                          </lord-icon>
+                        </div>
                       </div>
                     </td>
 
                     <td className="py-2 border border-white text-center">
-                    <div className="flex items-center justify-center ">
-                      <span>{item.password}</span>
-                    <div className="lordiconcopy cursor-pointer" onClick={()=>{copyText(item.password)}}>
-                        <lord-icon
-                          style={{ "width": "25px", "height": "25px", "paddingTop": "3px", "paddingLeft": "3px" }}
-                          src="https://cdn.lordicon.com/depeqmsz.json"
-                          trigger="hover">
-                        </lord-icon>
-                      </div>
+                      <div className="flex items-center justify-center ">
+                        <span>{item.password}</span>
+                        <div className="lordiconcopy cursor-pointer" onClick={() => { copyText(item.password) }}>
+                          <lord-icon
+                            style={{ "width": "25px", "height": "25px", "paddingTop": "3px", "paddingLeft": "3px" }}
+                            src="https://cdn.lordicon.com/depeqmsz.json"
+                            trigger="hover">
+                          </lord-icon>
+                        </div>
                       </div>
                     </td>
                   </tr>
