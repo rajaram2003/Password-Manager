@@ -198,7 +198,14 @@ const Manager = () => {
                           src="https://cdn.lordicon.com/vwzukuhn.json"
                           trigger="hover"
                           stroke="bold"
-                          colors="primary:#e4e4e4,secondary:#242424,tertiary:#16c72e,quaternary:#242424"
+                          colors="primary:#e4e4e4,secondary:#121331,tertiary:#16c72e,quaternary:#121331"
+                          style={{ "width": "25px", "height": "25px" }}>
+                        </lord-icon>
+                      </span>
+                      <span className="cursor-pointer">
+                        <lord-icon
+                          src="https://cdn.lordicon.com/skkahier.json"
+                          trigger="hover"
                           style={{ "width": "25px", "height": "25px" }}>
                         </lord-icon>
                       </span>
