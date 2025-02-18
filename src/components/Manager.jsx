@@ -149,6 +149,7 @@ const Manager = () => {
                   <th className="py-2">Site</th>
                   <th className="py-2">UserName</th>
                   <th className="py-2">Password</th>
+                  <th className="py-2">Actions</th>
                 </tr>
               </thead>
               <tbody className="bg-lime-200 text-slate-800">
@@ -190,6 +191,17 @@ const Manager = () => {
                           </lord-icon>
                         </div>
                       </div>
+                    </td>
+                    <td className="justify-center py-2 border border-white text-center">
+                      <span>
+                        <lord-icon
+                          src="https://cdn.lordicon.com/vwzukuhn.json"
+                          trigger="hover"
+                          stroke="bold"
+                          colors="primary:#e4e4e4,secondary:#242424,tertiary:#16c72e,quaternary:#000000"
+                          style={{ "width": "25px", "height": "25px" }}>
+                        </lord-icon>
+                      </span>
                     </td>
                   </tr>
                 })}
