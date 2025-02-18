@@ -193,7 +193,7 @@ const Manager = () => {
                       </div>
                     </td>
                     <td className="justify-center py-2 border border-white text-center">
-                      <span className="cursor-pointer">
+                      <span className="cursor-pointer mx-2">
                         <lord-icon
                           src="https://cdn.lordicon.com/vwzukuhn.json"
                           trigger="hover"
@@ -202,7 +202,7 @@ const Manager = () => {
                           style={{ "width": "25px", "height": "25px" }}>
                         </lord-icon>
                       </span>
-                      <span className="cursor-pointer">
+                      <span className="cursor-pointer mx-2">
                         <lord-icon
                           src="https://cdn.lordicon.com/skkahier.json"
                           trigger="hover"
