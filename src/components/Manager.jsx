@@ -85,23 +85,45 @@ const Manager = () => {
 
 
         <div className="text-slate-800 flex flex-col p-4 gap-5 items-center">
-          <input value={form.site} onChange={handleChange} placeholder="Enter website URL" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="site" id="" />
-          <div className="flex w-full justify-between gap-5">
-            <input value={form.username} onChange={handleChange} placeholder="Enter Username" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="username" id="" />
-            <div className="relative">
 
-              <input ref={passwordRef} value={form.password} onChange={handleChange} placeholder="Enter Password" className="rounded-full border border-amber-400 w-full p-4 py-1" type="password" name="password" id="" />
+          <input
+            value={form.site}
+            onChange={handleChange}
+            placeholder="Enter website URL"
+            className="rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] w-full p-4 py-1 text-slate-400 font-medium transition-all duration-300 focus:ring-2 focus:ring-lime-400 focus:outline-none"
+            type="text"
+            name="site"
+          />
+
+          <div className="flex w-full justify-between gap-5">
+            <input
+              value={form.username}
+              onChange={handleChange}
+              placeholder="Enter Username"
+              className="rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] w-full p-4 py-1 text-slate-400 font-medium transition-all duration-300 focus:ring-2 focus:ring-lime-400 focus:outline-none"
+              type="text"
+              name="username"
+            />
+
+            <div className="relative">
+              <input
+                ref={passwordRef}
+                value={form.password}
+                onChange={handleChange}
+                placeholder="Enter Password"
+                className="rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] w-full p-4 py-1 text-slate-400 font-medium transition-all duration-300 focus:ring-2 focus:ring-lime-400 focus:outline-none"
+                type="password"
+                name="password"
+              />
               <span className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer" onClick={showPassword}>
                 <img ref={ref} src="https://cdn-icons-png.flaticon.com/128/8231/8231416.png" alt="Eye Icon" className="w-7 h-7" />
               </span>
-
-
             </div>
           </div>
 
           <button onClick={savePassword}
             aria-label="Add Password"
-            className="flex justify-center items-center gap-2 font-medium text-slate-800 bg-zinc-500 rounded-full px-6 py-2 w-fit hover:bg-lime-400 transition-colors cursor-pointer active:scale-95 border border-yellow-400"
+            className="flex justify-center items-center gap-2 font-medium text-slate-900 rounded-full px-6 py-2 w-fit cursor-pointer active:scale-95 border bg-gradient-to-r from-indigo-500 to-purple-500"
           >
             <lord-icon
               src="https://cdn.lordicon.com/slmechys.json"
@@ -122,7 +144,7 @@ const Manager = () => {
 
           {passwordArray.length != 0 &&
             <table className="table-auto w-full rounded-md overflow-hidden">
-              <thead className="bg-yellow-300 text-slate-800">
+              <thead className="bg-lime-400 text-slate-800">
                 <tr>
                   <th className="py-2">Site</th>
                   <th className="py-2">UserName</th>
