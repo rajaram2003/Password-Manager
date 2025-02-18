@@ -68,16 +68,17 @@ const Manager = () => {
         theme="dark"
       />
 
-      <div className="absolute inset-0 -z-1 h-full w-full bg-violet-200 bg-gradient-to-b from-white to-fef3c7"></div>
+<div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
 
 
       <div className="mycontainer">
 
-        <h1 className="text-4xl text font-bold text-center">
-          <span className="text-yellow-300">&lt; </span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r to-violet-400 from-slate-800">Pass</span>
-          <span className="text-yellow-300">Mate /&gt;</span>
-        </h1>
+      <h1 className="text-4xl font-bold text-center">
+  <span className="text-lime-500">&lt; </span>
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-500 to-lime-300">Pass</span>
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-300 to-lime-500">Mate /&gt;</span>
+</h1>
+
         <p className="text-slate-800 text-lg font-medium text-center">Secure. Simplify. Own your passwords.</p>
 
         <div className="text-slate-800 flex flex-col p-4 gap-5 items-center">
