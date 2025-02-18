@@ -193,12 +193,12 @@ const Manager = () => {
                       </div>
                     </td>
                     <td className="justify-center py-2 border border-white text-center">
-                      <span>
+                      <span className="cursor-pointer">
                         <lord-icon
                           src="https://cdn.lordicon.com/vwzukuhn.json"
                           trigger="hover"
                           stroke="bold"
-                          colors="primary:#e4e4e4,secondary:#242424,tertiary:#16c72e,quaternary:#000000"
+                          colors="primary:#e4e4e4,secondary:#242424,tertiary:#16c72e,quaternary:#242424"
                           style={{ "width": "25px", "height": "25px" }}>
                         </lord-icon>
                       </span>
