@@ -68,18 +68,21 @@ const Manager = () => {
         theme="dark"
       />
 
-<div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
+      <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
 
 
       <div className="mycontainer">
 
-      <h1 className="text-4xl font-bold text-center">
-  <span className="text-lime-500">&lt; </span>
-  <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-500 to-lime-300">Pass</span>
-  <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-300 to-lime-500">Mate /&gt;</span>
-</h1>
+        <h1 className="text-4xl font-bold text-center">
+          <span className="text-lime-500">&lt; </span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-500 to-lime-300">Pass</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-300 to-lime-500">Mate /&gt;</span>
+        </h1>
 
-        <p className="text-slate-800 text-lg font-medium text-center">Secure. Simplify. Own your passwords.</p>
+        <p className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-600 dark:from-neutral-800 dark:via-gray-300 dark:to-white text-lg font-medium text-center">
+          Secure. Simplify. Own your passwords.
+        </p>
+
 
         <div className="text-slate-800 flex flex-col p-4 gap-5 items-center">
           <input value={form.site} onChange={handleChange} placeholder="Enter website URL" className="rounded-full border border-amber-400 w-full p-4 py-1" type="text" name="site" id="" />
@@ -98,7 +101,7 @@ const Manager = () => {
 
           <button onClick={savePassword}
             aria-label="Add Password"
-            className="flex justify-center items-center gap-2 font-medium text-slate-800 bg-amber-300 rounded-full px-6 py-2 w-fit hover:bg-violet-400 transition-colors cursor-pointer active:scale-95 border border-yellow-400"
+            className="flex justify-center items-center gap-2 font-medium text-slate-800 bg-zinc-500 rounded-full px-6 py-2 w-fit hover:bg-lime-400 transition-colors cursor-pointer active:scale-95 border border-yellow-400"
           >
             <lord-icon
               src="https://cdn.lordicon.com/slmechys.json"
@@ -111,7 +114,10 @@ const Manager = () => {
         </div>
 
         <div className="passwords">
-          <h2 className="font-extrabold text-2xl py-4 text-transparent bg-clip-text bg-gradient-to-r to-violet-400 from-slate-800">Your Passwords</h2>
+          <h2 className="font-extrabold text-2xl py-4 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-600 dark:from-neutral-800 dark:via-gray-300 dark:to-white">
+            Your Passwords
+          </h2>
+
           {passwordArray.length === 0 && <div className="text-red-600">No passwords to show 🐸</div>}
 
           {passwordArray.length != 0 &&
