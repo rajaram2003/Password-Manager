@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useRef } from "react"
 import { ToastContainer, toast } from 'react-toastify';
+import { v4 as uuidv4 } from 'uuid';
 
 const Manager = () => {
   const ref = useRef()
@@ -43,7 +44,7 @@ const Manager = () => {
   }
 
   const savePassword = () => {
-    setPasswordArray([...passwordArray, form])
+    setPasswordArray([...passwordArray, {...form, id: uuidv4()}])
     localStorage.setItem("passwords", JSON.stringify([...passwordArray, form]))
     console.log([...passwordArray, form])
   }
@@ -77,8 +78,8 @@ const Manager = () => {
 
         <h1 className="text-4xl font-bold text-center">
           <span className="text-lime-500">&lt; </span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-500 to-lime-300">Pass</span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-300 to-lime-500">Mate /&gt;</span>
+          <span className="text-lime-500">Pass</span>
+          <span className="text-lime-500">Mate /&gt;</span>
         </h1>
 
         <p className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-600 dark:from-neutral-800 dark:via-gray-300 dark:to-white text-lg font-medium text-center">
@@ -133,7 +134,7 @@ const Manager = () => {
               target="button"
               style={{ width: "24px", height: "24px" }}
             ></lord-icon>
-            Save Password
+            Secure Password
           </button>
         </div>
 
