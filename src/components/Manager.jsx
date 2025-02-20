@@ -125,7 +125,7 @@ const Manager = () => {
 
           <button onClick={savePassword}
             aria-label="Add Password"
-            className="flex justify-center items-center gap-2 font-medium text-slate-900 rounded-full px-6 py-2 w-fit cursor-pointer active:scale-95 border bg-gradient-to-r from-indigo-500 to-purple-500"
+            className="flex justify-center items-center gap-2 font-medium text-slate-900 rounded-full px-6 py-2 w-fit cursor-pointer active:scale-95 border bg-gradient-to-r from-green-500 to-lime-400"
           >
             <lord-icon
               src="https://cdn.lordicon.com/slmechys.json"
