@@ -17,7 +17,7 @@ const Manager = () => {
   }, [])
 
   const copyText = (text) => {
-    toast.success('copied to clipboard', {
+    toast.success('copied to clipboard.', {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -48,6 +48,16 @@ const Manager = () => {
     localStorage.setItem("passwords", JSON.stringify([...passwordArray, {...form, id: uuidv4()}]))
     console.log([...passwordArray, form])
     setform({ site: "", username: "", password: "" })
+    toast.success('All set! Your password is saved.', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
   }
 
   const deletePassword = (id) => {
@@ -56,10 +66,30 @@ const Manager = () => {
     if (c){
     setPasswordArray(passwordArray.filter(item=>item.id!==id))
     localStorage.setItem("passwords", JSON.stringify(passwordArray.filter(item=>item.id!==id)))
+    toast.success('Done! Password removed.', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
     }
   }
 
   const editPassword = (id) => {
+    toast.success('Customize your password.', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
     console.log("Editing password with id", id)
     setform(passwordArray.filter(i=>i.id===id)[0])
     setPasswordArray(passwordArray.filter(item=>item.id!==id))
@@ -71,7 +101,6 @@ const Manager = () => {
 
   return (
     <>
-
       <ToastContainer
         position="top-right"
         autoClose={5000}
