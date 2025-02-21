@@ -23,10 +23,10 @@
 Contributions are always welcome! 🎉
 
 **🔹** Fork the repository
-🔹 Create a new branch (git checkout -b feature-branch)
-🔹 Commit your changes (git commit -m "Added a new feature")
-🔹 Push to the branch (git push origin feature-branch)
-🔹 Open a Pull Request
+**🔹** Create a new branch (git checkout -b feature-branch)
+**🔹** Commit your changes (git commit -m "Added a new feature")
+**🔹** Push to the branch (git push origin feature-branch)
+**🔹** Open a Pull Request
 
 ---
 
