@@ -9,11 +9,15 @@ const Manager = () => {
   const [form, setform] = useState({ site: "", username: "", password: "" })
   const [passwordArray, setPasswordArray] = useState([])
 
+  const getPasswords = async () => {
+    let req = await fetch("http://localhost:3000/")
+    let passwords = await req.json()
+    console.log(passwords)
+    setPasswordArray(passwords)
+  }
+
   useEffect(() => {
-    let passwords = localStorage.getItem("passwords");
-    if (passwords) {
-      setPasswordArray(JSON.parse(passwords))
-    }
+    getPasswords()
   }, [])
 
   const copyText = (text) => {
@@ -43,43 +47,58 @@ const Manager = () => {
     }
   }
 
-  const savePassword = () => {
-    if(form.site.length >3 && form.username.length >3 && form.password.length >3) {
-    setPasswordArray([...passwordArray, { ...form, id: uuidv4() }])
-    localStorage.setItem("passwords", JSON.stringify([...passwordArray, { ...form, id: uuidv4() }]))
-    console.log([...passwordArray, form])
-    setform({ site: "", username: "", password: "" })
-    toast.success('All set! Your password is saved.', {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: false,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
-  }
-  else{
-    toast.error('Error: Password not saved!', {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: false,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
+  const savePassword = async () => {
+    if (form.site.length > 3 && form.username.length > 3 && form.password.length > 3) {
+
+      // If any such id exists in the db, delete it
+      await fetch("http://localhost:3000/", {
+        method: "DELETE", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: form.id })
+      })
+
+      setPasswordArray([...passwordArray, { ...form, id: uuidv4() }])
+      await fetch("http://localhost:3000/", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, id: uuidv4() })
+      })
+      // localStorage.setItem("passwords", JSON.stringify([...passwordArray, { ...form, id: uuidv4() }]))
+      // console.log([...passwordArray, form])
+      setform({ site: "", username: "", password: "" })
+      toast.success('All set! Your password is saved.', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
       });
-  }
+    }
+    else {
+      toast.error('Error: Password not saved!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    }
   }
 
-  const deletePassword = (id) => {
+  const deletePassword = async (id) => {
     console.log("Deleting password with id", id)
     let c = confirm("Oops! Are you sure you want to remove this password?")
     if (c) {
       setPasswordArray(passwordArray.filter(item => item.id !== id))
-      localStorage.setItem("passwords", JSON.stringify(passwordArray.filter(item => item.id !== id)))
+      await fetch("http://localhost:3000/", {
+        method: "DELETE", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id })
+      })
+      // localStorage.setItem("passwords", JSON.stringify(passwordArray.filter(item => item.id !== id)))
       toast.success('Done! Password removed.', {
         position: "top-right",
         autoClose: 5000,
@@ -105,7 +124,7 @@ const Manager = () => {
       theme: "dark",
     });
     console.log("Editing password with id", id)
-    setform(passwordArray.filter(i => i.id === id)[0])
+    setform({...passwordArray.filter(i => i.id === id)[0], id: id})
     setPasswordArray(passwordArray.filter(item => item.id !== id))
   }
 
@@ -203,7 +222,7 @@ const Manager = () => {
          [&::-webkit-scrollbar-thumb]:rounded-full
        s[&::-webkit-scrollbar-thumb]:bg-lime-400"
           style={{ scrollbarWidth: "thin", scrollbarColor: "#a3e635 transparent" }}>
-            
+
           <h2 className="font-extrabold text-xl sm:text-2xl py-4 bg-clip-text text-transparent sbg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-600 dark:from-neutral-800 dark:via-gray-300 dark:to-white">
             Your Passwords
           </h2>
@@ -250,7 +269,7 @@ const Manager = () => {
 
                     <td className="py-2 border border-white text-center">
                       <div className="flex items-center justify-center ">
-                        <span>{item.password}</span>
+                        <span>{"*" .repeat(item.password.length)}</span>
                         <div className="lordiconcopy cursor-pointer" onClick={() => { copyText(item.password) }}>
                           <lord-icon
                             style={{ "width": "25px", "height": "25px", "paddingTop": "3px", "paddingLeft": "3px" }}
