@@ -17,10 +17,12 @@
 
 🔗 **Live Version** → [Click Here](#) _(Add your deployed link)_
 
+---
+
 ## 🤝 Contributing
 Contributions are always welcome! 🎉
 
-🔹 Fork the repository
+**🔹** Fork the repository
 🔹 Create a new branch (git checkout -b feature-branch)
 🔹 Commit your changes (git commit -m "Added a new feature")
 🔹 Push to the branch (git push origin feature-branch)
