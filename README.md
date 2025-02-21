@@ -25,6 +25,7 @@ Contributions are always welcome! 🎉
 Follow these steps to contribute:  
 
 - **Fork** the repository  
+
 - **Create** a new branch:  
   ```sh
   git checkout -b feature-branch
