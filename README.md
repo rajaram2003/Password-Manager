@@ -1,27 +1,40 @@
-# 🔐 PassMate - Password Manager
+<h1 align="center">🔐 PassMate - Password Manager</h1>
 
-A secure and efficient **Password Manager** built with **React, Tailwind CSS, ExpressJS, and MongoDB**. It allows users to **store, edit, delete, and copy passwords** seamlessly.
+<p align="center">
+  A secure and efficient <b>Password Manager</b> built with <b>React, Tailwind CSS, ExpressJS, and MongoDB</b>. 
+  It allows users to <b>store, edit, delete, and copy passwords</b> seamlessly.
+</p>
 
-🔗 Live Demo
-🚀 Live Version (Add your deployed link here)
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/github/repo-size/rajaram2003/Password-Manager" alt="Repo Size"></a>
+  <a href="#"><img src="https://img.shields.io/github/stars/rajaram2003/Password-Manager?style=social" alt="Stars"></a>
+  <a href="#"><img src="https://img.shields.io/github/last-commit/rajaram2003/Password-Manager" alt="Last Commit"></a>
+</p>
 
-🤝 Contributing
-Contributions are always welcome!
+---
 
-If you have any improvements or suggestions, feel free to fork the repository and create a pull request.
+## 🚀 Live Demo
 
-![GitHub repo size](https://img.shields.io/github/repo-size/rajaram2003/Password-Manager)
-![GitHub stars](https://img.shields.io/github/stars/rajaram2003/Password-Manager?style=social)
-![GitHub last commit](https://img.shields.io/github/last-commit/rajaram2003/Password-Manager)
+🔗 **Live Version** → [Click Here](#) _(Add your deployed link)_
+
+## 🤝 Contributing
+Contributions are always welcome! 🎉
+
+🔹 Fork the repository
+🔹 Create a new branch (git checkout -b feature-branch)
+🔹 Commit your changes (git commit -m "Added a new feature")
+🔹 Push to the branch (git push origin feature-branch)
+🔹 Open a Pull Request
 
 ---
 
 ## 📌 Features
-✅ Save passwords securely using **LocalStorage & MongoDB**  
-✅ Copy passwords with a single click  
-✅ Edit or delete saved passwords  
-✅ Fully responsive UI  
-✅ ExpressJS backend integration  
+
+✔️ **Secure Storage** – Save passwords safely using **LocalStorage & MongoDB**  
+✔️ **Copy to Clipboard** – Copy passwords with a single click  
+✔️ **Edit & Delete** – Modify or remove stored passwords  
+✔️ **Responsive UI** – Works smoothly across all devices  
+✔️ **ExpressJS Integration** – Backend with REST APIs  
 
 ---
 
@@ -43,20 +56,21 @@ If you have any improvements or suggestions, feel free to fork the repository an
 
 ## ⚡ Tech Stack
 
-- **Frontend**: React.js, Tailwind CSS
-- **Backend**: Express.js, Node.js
-- **Database**: MongoDB
-- **Tools**: React Toastify, LocalStorage
+- 🌐 **Frontend** → React.js, Tailwind CSS  
+- 🖥️ **Backend** → Express.js, Node.js  
+- 🗄️ **Database** → MongoDB  
+- ⚙️ **Tools** → React Toastify, LocalStorage  
 
 ---
 
 ## 🛠 Installation & Setup
 
-Follow these steps to set up the project:
+Follow these steps to set up **PassMate** locally:
 
-1. **Clone the repository**
+1. **Clone the repository**  
    ```sh
    git clone https://github.com/rajaram2003/Password-Manager.git
+   cd Password-Manager
 
 ---
 
