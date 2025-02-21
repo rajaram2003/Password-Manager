@@ -61,11 +61,12 @@ Follow these steps to set up the project:
 ---
 
 📧 Contact
-GitHub: rajaram2003
-LinkedIn: Your LinkedIn
+GitHub: [rajaram2003](https://github.com/rajaram2003)
+LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/rajaram-biswal-462272320/)
 
 ---
 
 🎯 Credits
-Inspired by CodeWithHarry 🚀
+💡 Inspired by CodeWithHarry 🚀
 
+🙌 Feel free to contribute and improve PassMate!
