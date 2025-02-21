@@ -22,11 +22,20 @@
 ## 🤝 Contributing
 Contributions are always welcome! 🎉
 
-- Fork the repository
-- Create a new branch (git checkout -b feature-branch)
-- Commit your changes (git commit -m "Added a new feature")
-- Push to the branch (git push origin feature-branch)
-- Open a Pull Request
+Follow these steps to contribute:  
+
+- **Fork** the repository  
+- **Create** a new branch:  
+  ```sh
+  git checkout -b feature-branch
+
+- **Commit** your changes:
+  ```sh
+  git commit -m "Added a new feature"
+
+- **Push** to the branch:
+  ```sh
+  git push origin feature-branch
 
 ---
 
