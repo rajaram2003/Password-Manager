@@ -15,7 +15,7 @@
 
 ## 🚀 Live Demo
 
-🔗 **Live Version** → [Click Here](#) _([Add your deployed link](https://password-manager-pass-mate.vercel.app/))_
+🔗 **Live Version** → [Click Here](https://password-manager-pass-mate.vercel.app/)
 
 ---
 
